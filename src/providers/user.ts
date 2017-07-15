@@ -33,7 +33,7 @@ export class User {
       let authDetails = this.cognito.makeAuthDetails(username, password);
 
       user.authenticateUser(authDetails, {
-        'onSuccess': function(result) {
+        'onSuccess': (result)=> {
           var logins = {};
           var loginKey = 'cognito-idp.' +
                           aws_cognito_region +
